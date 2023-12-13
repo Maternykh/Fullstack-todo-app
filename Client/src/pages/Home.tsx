@@ -30,13 +30,13 @@ const Home: React.FC = () => {
             <BiLoaderAlt className=" animate-spin text-5xl" />
           </div>
         ) : (
-          <div className=" flex flex-wrap">
+          <div className=" w-full flex flex-wrap">
             {Tods}
-            <Link to={`addtodo`}>
+            <Link className=" w-full xl:w-72" to={`addtodo`}>
               <div
                 className={`${
                   todos.length === 0 ? " block" : " hidden"
-                } h-56 w-72 pb-2 pr-2`}
+                } h-40 xl:h-56 w-full  pb-2 pr-2`}
               >
                 <div className=" w-full h-full  text-zinc-400 border-zinc-500 flex justify-center items-center  border-dashed border-2 rounded-xl">
                   + Add New Task
