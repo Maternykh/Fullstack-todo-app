@@ -32,11 +32,13 @@ const EditTodo: React.FC = () => {
       Category,
     };
     dispatch(setLoading(true));
-    axios.put(`http://localhost:5555/todos/${id}`, add).then(() => {
-      dispatch(setLoading(false));
-      dispatch(clearInputs());
-      navigate("/");
-    });
+    axios
+      .put(`https://fullstack-todo-app-mern.onrender.com/todos/${id}`, add)
+      .then(() => {
+        dispatch(setLoading(false));
+        dispatch(clearInputs());
+        navigate("/");
+      });
   };
   return (
     <div className="  p-3 rounded-xl bg-zinc-700 flex justify-center">

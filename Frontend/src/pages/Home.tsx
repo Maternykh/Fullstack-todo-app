@@ -12,10 +12,12 @@ const Home: React.FC = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(setLoading(true));
-    axios.get(`http://localhost:5555/todos`).then((res) => {
-      dispatch(setTodos(res.data));
-      dispatch(setLoading(false));
-    });
+    axios
+      .get(`https://fullstack-todo-app-mern.onrender.com/todos`)
+      .then((res) => {
+        dispatch(setTodos(res.data));
+        dispatch(setLoading(false));
+      });
   }, []);
   const todos = useAppSelector((state: RootState) => state.todo.todos);
   const Tods = todos.map((todo) => <TodoCart key={todo._id} {...todo} />);

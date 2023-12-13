@@ -15,11 +15,13 @@ const DeleteTodo: React.FC = () => {
   const navigate = useNavigate();
   const Delete = () => {
     dispatch(setLoading(true));
-    axios.delete(`http://localhost:5555/todos/${id}`).then(() => {
-      dispatch(setLoading(false));
-      navigate("/");
-      dispatch(clearInputs());
-    });
+    axios
+      .delete(`https://fullstack-todo-app-mern.onrender.com/todos/${id}`)
+      .then(() => {
+        dispatch(setLoading(false));
+        navigate("/");
+        dispatch(clearInputs());
+      });
   };
   return (
     <div className=" flex-col flex justify-center items-center">

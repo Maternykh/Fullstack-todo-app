@@ -31,11 +31,13 @@ const Addtodo: React.FC = () => {
       Category,
     };
     dispatch(setLoading(true));
-    axios.post("http://localhost:5555/todos", add).then(() => {
-      dispatch(setLoading(false));
-      dispatch(clearInputs());
-      navigate("/");
-    });
+    axios
+      .post("https://fullstack-todo-app-mern.onrender.com/todos", add)
+      .then(() => {
+        dispatch(setLoading(false));
+        dispatch(clearInputs());
+        navigate("/");
+      });
   };
   return (
     <div className="  p-3 rounded-xl bg-zinc-700 flex justify-center">
