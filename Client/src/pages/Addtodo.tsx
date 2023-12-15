@@ -76,12 +76,12 @@ const Addtodo: React.FC = () => {
               {Category}
             </div>
           </div>
-          <div className=" my-5 flex">
+          <div className=" my-5 flex flex-wrap">
             {categ.map((cat) => (
               <div
                 key={cat}
                 onClick={() => dispatch(setCategory(cat))}
-                className={` mr-2 py-2 px-3 rounded-full ${
+                className={` mb-2 mr-2 py-2 px-3 rounded-full ${
                   cat === "Completed" && " bg-green-500 text-white"
                 } ${cat === "Important" && " bg-red-500 text-white"} ${
                   cat === "Do it now" && " bg-indigo-500 text-white"

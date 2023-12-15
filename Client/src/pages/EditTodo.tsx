@@ -77,7 +77,7 @@ const EditTodo: React.FC = () => {
               {Category}
             </div>
           </div>
-          <div className=" my-5 flex">
+          <div className=" my-5 flex flex-wrap">
             {categ.map((cat) => (
               <div
                 key={cat}
