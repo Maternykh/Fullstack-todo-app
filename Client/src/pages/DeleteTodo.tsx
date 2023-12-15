@@ -33,11 +33,13 @@ const DeleteTodo: React.FC = () => {
         <div className=" mt-2">
           <div className=" flex justify-between mt-2">
             <div
-              className={`${Category === "Completed" && " bg-green-500 "} ${
-                Category === "Important" && " bg-indigo-500 "
-              } ${
-                Category === "Do it now" && " bg-red-500 "
-              } text-white  py-2 px-3 rounded-full `}
+              className={`${
+                Category === "Completed" && " bg-green-500 text-white"
+              } ${Category === "Important" && " bg-indigo-500 text-white"} ${
+                Category === "Do it now" && " bg-red-500 text-white"
+              } ${Category === "Classic" && " bg-white text-black "} ${
+                Category === "Note" && " bg-sky-600 text-white"
+              }     py-2 px-3 rounded-full `}
             >
               {Category}
             </div>

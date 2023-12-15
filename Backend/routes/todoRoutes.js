@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
     ) {
       return res.status(400).send({
         message:
-          "Send all required fields: title, value, data,Category,Completed",
+          "Send all required fields: title, value, data, Category, Completed",
       });
     }
     const newTodo = {

@@ -16,7 +16,7 @@ const EditTodo: React.FC = () => {
     (state: RootState) => state.inputTod
   );
   const dispatch = useAppDispatch();
-  const categ = ["Completed", "Important", "Do it now"];
+  const categ = ["Completed", "Important", "Do it now", "Classic", "Note"];
   const navigate = useNavigate();
   const { id } = useParams();
   const OnCLickSubmit = () => {
@@ -70,7 +70,9 @@ const EditTodo: React.FC = () => {
             <div
               className={`${Category === "Completed" && " text-green-500 "} ${
                 Category === "Important" && " text-indigo-500 "
-              } ${Category === "Do it now" && " text-red-500 "}  ml-5`}
+              } ${Category === "Do it now" && " text-red-500 "}  ${
+                Category === "Classic" && " text-white "
+              } ${Category === "Note" && " text-sky-600 "}   ml-5`}
             >
               {Category}
             </div>
@@ -80,11 +82,13 @@ const EditTodo: React.FC = () => {
               <div
                 key={cat}
                 onClick={() => dispatch(setCategory(cat))}
-                className={`text-white mr-2 py-2 px-3 rounded-full ${
-                  cat === "Completed" && " bg-green-500 "
-                } ${cat === "Important" && " bg-indigo-500 "} ${
-                  cat === "Do it now" && " bg-red-500 "
-                } bg-green-500 hover:cursor-pointer`}
+                className={` mr-2 py-2 px-3 rounded-full ${
+                  cat === "Completed" && " bg-green-500 text-white"
+                } ${cat === "Important" && " bg-indigo-500 text-white"} ${
+                  cat === "Do it now" && " bg-red-500 text-white"
+                } ${cat === "Classic" && " bg-white text-black "} ${
+                  cat === "Note" && " bg-sky-600 text-white"
+                }  bg-green-500 hover:cursor-pointer`}
               >
                 {cat}
               </div>
