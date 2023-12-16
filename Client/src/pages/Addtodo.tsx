@@ -68,8 +68,8 @@ const Addtodo: React.FC = () => {
             Select category:
             <div
               className={`${Category === "Completed" && " text-green-500 "} ${
-                Category === "Important" && " text-red-500 "
-              } ${Category === "Do it now" && " text-indigo-500 "} ${
+                Category === "Important" && " text-indigo-500 "
+              } ${Category === "Do it now" && " text-red-500 "} ${
                 Category === "Classic" && " text-white "
               } ${Category === "Note" && " text-sky-600 "}   ml-5`}
             >
@@ -83,8 +83,8 @@ const Addtodo: React.FC = () => {
                 onClick={() => dispatch(setCategory(cat))}
                 className={` mb-2 mr-2 py-2 px-3 rounded-full ${
                   cat === "Completed" && " bg-green-500 text-white"
-                } ${cat === "Important" && " bg-red-500 text-white"} ${
-                  cat === "Do it now" && " bg-indigo-500 text-white"
+                } ${cat === "Important" && " bg-indigo-500 text-white"} ${
+                  cat === "Do it now" && " bg-red-500 text-white"
                 } ${cat === "Classic" && " bg-white text-black "} ${
                   cat === "Note" && " bg-sky-600 text-white"
                 }   bg-green-500 hover:cursor-pointer`}
