@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Addtodo from "./pages/Addtodo";
 import EditTodo from "./pages/EditTodo";
 import DeleteTodo from "./pages/DeleteTodo";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/addtodo" element={<Addtodo />}></Route>
         <Route path="/editTodo/:id" element={<EditTodo />}></Route>
         <Route path="/deleteTodo/:id" element={<DeleteTodo />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </div>
   );

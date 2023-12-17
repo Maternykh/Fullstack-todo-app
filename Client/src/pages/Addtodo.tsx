@@ -100,7 +100,7 @@ const Addtodo: React.FC = () => {
           >
             + Add
           </div>
-          <Link to={`/`}>
+          <Link to={`/`} onClick={() => dispatch(clearInputs())}>
             <div className=" items-center hover:cursor-pointer border-2 w-full py-2 flex justify-center rounded-xl bg-zinc-600 mt-2">
               Back
             </div>
